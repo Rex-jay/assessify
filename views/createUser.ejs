@@ -1,0 +1,38 @@
+<%layout('layout/boilerplate')%>
+
+<div class="row">
+  <div class="col-6 offset-3">
+    <h1 class="text-center">Register</h1>
+    <form class="login-form" method="post" action="/users/createUser" enctype="application/x-www-form-urlencoded">
+      <div class="mb-3">
+          <label class="form-label" for="name">Full Name</label>
+          <input type="name" id="name" class="form-control" name="name">
+      </div>
+      <div class="mb-3">
+          <label class="form-label" for="email">Email</label>
+          <input type="email" class="form-control"  name="email">
+      </div>
+
+      <div class="mb-3">
+          <label class="form-label" for="role">Role</label>
+          <select id="role" class="form-control" name="role" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="examiner" >Examiner</option>
+            <option value="student">Student</option>
+          </select>
+      </div>
+      <div class="mb-3">
+          <label class="form-label" for="password">Password</label>
+          <input type="password" class="form-control" placeholder="Enter password" name="password"/>
+      </div>
+      <div class="mb-3">
+          <label class="form-label" for="password">Confirm Password</label>
+          <input type="password" class="form-control" id="repeat_password" placeholder="Confirm Password" name="repeat_password">
+      </div>
+      <div class="mb-3">
+          <button class="btn btn-info">Register</button>
+      </div>
+      <p class="message text-center">Have an account? <a href="/users/login">Lgoin</a></p>
+    </form>
+  </div>
+</div>
